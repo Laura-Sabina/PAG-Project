@@ -22,31 +22,21 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblInstructiuni2 = New System.Windows.Forms.Label()
         Me.lblReset = New System.Windows.Forms.Label()
         Me.lblExit = New System.Windows.Forms.Label()
         Me.lblSelectare = New System.Windows.Forms.Label()
         Me.lblInstructiuni = New System.Windows.Forms.Label()
         Me.lblStart = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Image = Global.MazeGame.My.Resources.Resources.Maze
-        Me.PictureBox1.Location = New System.Drawing.Point(122, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(502, 389)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 14
-        Me.PictureBox1.TabStop = False
         '
         'lblInstructiuni2
         '
         Me.lblInstructiuni2.BackColor = System.Drawing.Color.Black
-        Me.lblInstructiuni2.ForeColor = System.Drawing.Color.Maroon
+        Me.lblInstructiuni2.Font = New System.Drawing.Font("Papyrus", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInstructiuni2.ForeColor = System.Drawing.Color.MistyRose
         Me.lblInstructiuni2.Location = New System.Drawing.Point(105, 9)
         Me.lblInstructiuni2.Name = "lblInstructiuni2"
         Me.lblInstructiuni2.Size = New System.Drawing.Size(539, 433)
@@ -64,7 +54,7 @@ Partial Class Form1
         Me.lblReset.Name = "lblReset"
         Me.lblReset.Size = New System.Drawing.Size(197, 50)
         Me.lblReset.TabIndex = 12
-        Me.lblReset.Text = "Reset Level "
+        Me.lblReset.Text = "Reset State"
         Me.lblReset.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblExit
@@ -115,6 +105,17 @@ Partial Class Form1
         Me.lblStart.Text = "Start Game"
         Me.lblStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Image = Global.MazeGame.My.Resources.Resources.Maze
+        Me.PictureBox1.Location = New System.Drawing.Point(122, 9)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(502, 389)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 14
+        Me.PictureBox1.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -130,6 +131,7 @@ Partial Class Form1
         Me.Controls.Add(Me.lblStart)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Form1"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
