@@ -10,10 +10,13 @@
     Dim count1 As Double
     Dim x, x1 As Double
     Dim y, y1 As Double
+    Dim intSound As Integer = 0
+    Dim snd As New sound
    
     Private Sub Level_4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Top = (My.Computer.Screen.WorkingArea.Height \ 2) - (Me.Height \ 2)
         Me.Left = (My.Computer.Screen.WorkingArea.Width \ 2) - (Me.Width \ 2)
+        lblNext.Visible = False
         'firstLoad = Data.first4.Text
     End Sub
     Private Sub lblMenu_Click(sender As Object, e As EventArgs) Handles lblMenu.Click
@@ -34,6 +37,11 @@
             gameStart = False
             lblStart.Visible = True
             lblNext.Visible = False
+            intSound += 1
+            With snd
+                .Name = "SOUND" & intSound
+                .play(2, False)
+            End With
             min = 0
             sec = 0
             total = 0
@@ -69,6 +77,11 @@
     End Sub
 
     Private Sub lblNext_Click(sender As Object, e As EventArgs) Handles lblNext.Click
+        intSound += 1
+        With snd
+            .Name = "SOUND" & intSound
+            .play(3, False, 300)
+        End With
         Timer1.Enabled = False
         Level_5.Show()
 
@@ -123,6 +136,11 @@
         If gameStart = True Then
             Timer2.Enabled = False
             Timer1.Enabled = False
+            intSound += 1
+            With snd
+                .Name = "SOUND" & intSound
+                .play(2, False)
+            End With
             min = 0
             sec = 0
             total = 0
@@ -133,5 +151,21 @@
             gameStart = False
 
         End If
+    End Sub
+    Private Sub lblNext_MouseEnter(sender As Object, e As EventArgs) Handles lblNext.MouseEnter
+        lblNext.Top -= 5
+
+    End Sub
+
+    Private Sub lblStart_MouseEnter(sender As Object, e As EventArgs) Handles lblStart.MouseEnter
+        lblStart.Top -= 5
+    End Sub
+
+    Private Sub lblNext_MouseLeave(sender As Object, e As EventArgs) Handles lblNext.MouseLeave
+        lblNext.Top += 5
+    End Sub
+
+    Private Sub lblStart_MouseLeave(sender As Object, e As EventArgs) Handles lblStart.MouseLeave
+        lblStart.Top += 5
     End Sub
 End Class
