@@ -6,7 +6,10 @@
     Dim firstLoad As Boolean
     Dim start1 As Boolean
     Dim start2, tleft, tright As Boolean
-    Dim count1, count2 As Integer
+    Dim count2 As Integer
+    Dim count1 As Double
+    Dim x, x1 As Double
+    Dim y, y1 As Double
    
     Private Sub Level_4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Top = (My.Computer.Screen.WorkingArea.Height \ 2) - (Me.Height \ 2)
@@ -36,8 +39,11 @@
             total = 0
             lblTime1.Text = "00:00"
             MsgBox("Ai atins peretii!")
+               lbl2.Location = New Point(123, 125)
             Timer1.Enabled = False
             Timer2.Enabled = False
+
+
         End If
     End Sub
 
@@ -64,7 +70,7 @@
 
     Private Sub lblNext_Click(sender As Object, e As EventArgs) Handles lblNext.Click
         Timer1.Enabled = False
-        ' Level_3.Show()
+        Level_5.Show()
 
         'Daca este primul joc va salva timpul in formularul Data
 
@@ -87,7 +93,6 @@
         If gameStart = True Then
             If start2 = True Then
                 If tleft = True Then
-
                     lbl2.Left += 15
                     count1 += 15
                     If count1 >= 165 Then
@@ -101,31 +106,32 @@
                     End If
                 End If
             End If
-            If start1 = True Then
-                If tright = True Then
-
-                    lbl1.Left -= 15
-                    count2 -= 15
-                    If count2 <= 0 Then
-                        tright = False
-                    End If
-                Else
-                    lbl1.Left += 15
-                    count2 += 15
-                    If count2 >= 165 Then
-                        tright = True
-                    End If
-                End If
-            End If
         End If
     End Sub
 
     Private Sub lblStart1_Click(sender As Object, e As EventArgs) Handles lblStart1.Click
         start1 = True
+       
     End Sub
 
     Private Sub lblStart2_Click(sender As Object, e As EventArgs) Handles lblStart2.Click
         start2 = True
         Timer2.Enabled = True
+    End Sub
+
+    Private Sub lbl2_MouseEnter(sender As Object, e As EventArgs) Handles lbl2.MouseEnter
+        If gameStart = True Then
+            Timer2.Enabled = False
+            Timer1.Enabled = False
+            min = 0
+            sec = 0
+            total = 0
+            lblTime1.Text = "00:00"
+            MsgBox("Ai atins peretii!")
+            lblNext.Visible = False
+            lblStart.Visible = True
+            gameStart = False
+
+        End If
     End Sub
 End Class

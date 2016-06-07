@@ -45,12 +45,12 @@ Partial Class Level_4
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblTime1 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.lbl1 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.lblStart2 = New System.Windows.Forms.Label()
         Me.lblStart1 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label30
@@ -177,7 +177,7 @@ Partial Class Level_4
         Me.Label19.BackColor = System.Drawing.Color.Maroon
         Me.Label19.Location = New System.Drawing.Point(472, 206)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(145, 30)
+        Me.Label19.Size = New System.Drawing.Size(125, 30)
         Me.Label19.TabIndex = 142
         '
         'Label11
@@ -251,21 +251,12 @@ Partial Class Level_4
         Me.Label1.Text = "Level 4"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lbl1
-        '
-        Me.lbl1.BackColor = System.Drawing.Color.Maroon
-        Me.lbl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl1.Location = New System.Drawing.Point(605, 65)
-        Me.lbl1.Name = "lbl1"
-        Me.lbl1.Size = New System.Drawing.Size(71, 45)
-        Me.lbl1.TabIndex = 165
-        '
         'Label7
         '
         Me.Label7.BackColor = System.Drawing.Color.Maroon
-        Me.Label7.Location = New System.Drawing.Point(587, 236)
+        Me.Label7.Location = New System.Drawing.Point(587, 206)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(30, 211)
+        Me.Label7.Size = New System.Drawing.Size(30, 241)
         Me.Label7.TabIndex = 166
         '
         'Label9
@@ -308,18 +299,26 @@ Partial Class Level_4
         Me.lblStart1.Text = "Start Transportation"
         Me.lblStart1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label3
+        '
+        Me.Label3.BackColor = System.Drawing.Color.Maroon
+        Me.Label3.Location = New System.Drawing.Point(193, 82)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(480, 12)
+        Me.Label3.TabIndex = 172
+        '
         'Level_4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(1019, 737)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lblStart1)
         Me.Controls.Add(Me.lblStart2)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.lbl1)
         Me.Controls.Add(Me.Label30)
         Me.Controls.Add(Me.Label28)
         Me.Controls.Add(Me.lbl2)
@@ -369,10 +368,10 @@ Partial Class Level_4
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents lblTime1 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents lbl1 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents lblStart2 As System.Windows.Forms.Label
     Friend WithEvents lblStart1 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class
