@@ -4,10 +4,13 @@
     Dim sec As Integer
     Dim total As Integer
     Dim firstLoad As Boolean
+    Dim intSound As Integer = 0
+    Dim snd As New sound
     Private Sub Level_2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Top = (My.Computer.Screen.WorkingArea.Height \ 2) - (Me.Height \ 2)
         Me.Left = (My.Computer.Screen.WorkingArea.Width \ 2) - (Me.Width \ 2)
-        firstLoad = Data.first2.Text
+        lblNext.Visible = False
+        'firstLoad = Data.first2.Text
     End Sub
 
     Private Sub lblMenu_Click(sender As Object, e As EventArgs) Handles lblMenu.Click
@@ -30,6 +33,11 @@
             lblNext.Visible = False
             Timer1.Enabled = False
             Timer2.Enabled = False
+            intSound += 1
+            With snd
+                .Name = "SOUND" & intSound
+                .play(2, False)
+            End With
             min = 0
             sec = 0
             total = 0
@@ -61,8 +69,13 @@
     End Sub
 
     Private Sub lblNext_Click(sender As Object, e As EventArgs) Handles lblNext.Click
+        intSound += 1
+        With snd
+            .Name = "SOUND" & intSound
+            .play(3, False, 300)
+        End With
         Timer1.Enabled = False
-        ' Level_3.Show()
+        Level_3.Show()
 
         'Daca este primul joc va salva timpul in formularul Data
 
@@ -105,5 +118,21 @@
             MsgBox("Ai atins peretii!")
 
         End If
+    End Sub
+    Private Sub lblNext_MouseEnter(sender As Object, e As EventArgs) Handles lblNext.MouseEnter
+        lblNext.Top -= 5
+
+    End Sub
+
+    Private Sub lblStart_MouseEnter(sender As Object, e As EventArgs) Handles lblStart.MouseEnter
+        lblStart.Top -= 5
+    End Sub
+
+    Private Sub lblNext_MouseLeave(sender As Object, e As EventArgs) Handles lblNext.MouseLeave
+        lblNext.Top += 5
+    End Sub
+
+    Private Sub lblStart_MouseLeave(sender As Object, e As EventArgs) Handles lblStart.MouseLeave
+        lblStart.Top += 5
     End Sub
 End Class

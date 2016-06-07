@@ -126,7 +126,7 @@ Partial Class LevelSelect
         Me.lblLevel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblLevel4.Font = New System.Drawing.Font("Papyrus", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLevel4.ForeColor = System.Drawing.Color.MistyRose
-        Me.lblLevel4.Location = New System.Drawing.Point(457, 54)
+        Me.lblLevel4.Location = New System.Drawing.Point(457, 39)
         Me.lblLevel4.Name = "lblLevel4"
         Me.lblLevel4.Size = New System.Drawing.Size(124, 113)
         Me.lblLevel4.TabIndex = 13
@@ -595,16 +595,18 @@ Partial Class LevelSelect
         'Level5
         '
         Me.Level5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Level5.Image = Global.MazeGame.My.Resources.Resources.level5
         Me.Level5.Location = New System.Drawing.Point(597, 39)
         Me.Level5.Name = "Level5"
         Me.Level5.Size = New System.Drawing.Size(124, 113)
+        Me.Level5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Level5.TabIndex = 4
         Me.Level5.TabStop = False
         '
         'Level4
         '
         Me.Level4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Level4.Image = Global.MazeGame.My.Resources.Resources.level4
+        Me.Level4.Image = Global.MazeGame.My.Resources.Resources.levell4
         Me.Level4.Location = New System.Drawing.Point(457, 39)
         Me.Level4.Name = "Level4"
         Me.Level4.Size = New System.Drawing.Size(124, 113)

@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.lblInstructiuni2 = New System.Windows.Forms.Label()
         Me.lblReset = New System.Windows.Forms.Label()
         Me.lblExit = New System.Windows.Forms.Label()
@@ -29,7 +30,9 @@ Partial Class Form1
         Me.lblInstructiuni = New System.Windows.Forms.Label()
         Me.lblStart = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblInstructiuni2
@@ -134,6 +137,7 @@ Partial Class Form1
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Form1"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -144,5 +148,6 @@ Partial Class Form1
     Friend WithEvents lblSelectare As System.Windows.Forms.Label
     Friend WithEvents lblInstructiuni As System.Windows.Forms.Label
     Friend WithEvents lblStart As System.Windows.Forms.Label
+    Friend WithEvents BindingSource1 As System.Windows.Forms.BindingSource
 
 End Class

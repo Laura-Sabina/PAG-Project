@@ -6,6 +6,8 @@
     Dim min As Integer
     Dim sec As Integer
     Dim middle As String
+    Dim intSound As Integer = 0
+    Dim snd As New sound
 
     Private Sub LevelSelect_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Top = (My.Computer.Screen.WorkingArea.Height \ 2) - (Me.Height \ 2)
@@ -94,6 +96,12 @@
     End Sub
 
     Private Sub lblBackToMenu_MouseEnter(sender As Object, e As EventArgs) Handles lblBackToMenu.MouseEnter
+
+        intSound += 1
+        With snd
+            .Name = "SOUND" & intSound
+            .play(1, False, 300)
+        End With
         lblBackToMenu.Top -= 5
     End Sub
 
@@ -155,12 +163,12 @@
 
     End Sub
 
-    Private Sub Level10_Click(sender As Object, e As EventArgs) Handles Level10.Click
 
-    End Sub
-
-
-    Private Sub lblLevel1_Click(sender As Object, e As EventArgs) Handles lblLevel1.Click
-
+    Private Sub lblLevel1_MouseEnter(sender As Object, e As EventArgs) Handles lblLevel9.MouseEnter, lblLevel8.MouseEnter, lblLevel7.MouseEnter, lblLevel6.MouseEnter, lblLevel5.MouseEnter, lblLevel4.MouseEnter, lblLevel3.MouseEnter, lblLevel2.MouseEnter, lblLevel10.MouseEnter, lblLevel1.MouseEnter
+        intSound += 1
+        With snd
+            .Name = "SOUND" & intSound
+            .play(1, False, 300)
+        End With
     End Sub
 End Class

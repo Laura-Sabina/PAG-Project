@@ -1,10 +1,17 @@
 ﻿Imports System
 Imports System.IO
 Imports System.Text
-Imports System.Exception
-
 Public Class Form1
+    Dim intSound As Integer = 0
+    Dim snd As New sound
     Dim firstTime As Boolean
+    Private Sub Hsound()
+        For x = 0 To intSound
+            snd.kill("SOUND" & x)
+        Next
+    End Sub
+
+
 
     Private Sub lblExit_Click(sender As Object, e As EventArgs) Handles lblExit.Click
 
@@ -22,9 +29,18 @@ Public Class Form1
     End Sub
     Private Sub lblStart_Click(sender As Object, e As EventArgs) Handles lblStart.Click
         Level_1.Show()
+        Level_1.lblNext.Visible = False
     End Sub
 
     Private Sub lblStart_MouseEnter(sender As Object, e As EventArgs) Handles lblStart.MouseEnter
+
+        'My.Computer.Audio.Play(My.Resources.Finger_snap, _
+        'AudioPlayMode.Background)
+        intSound += 1
+        With snd
+            .Name = "SOUND" & intSound
+            .play(1, False, 300)
+        End With
         lblStart.Top -= 5
     End Sub
 
@@ -34,6 +50,14 @@ Public Class Form1
 
 
     Private Sub lblInstructiuni_MouseEnter(sender As Object, e As EventArgs) Handles lblInstructiuni.MouseEnter
+
+        'My.Computer.Audio.Play(My.Resources.Finger_snap, _
+        'AudioPlayMode.Background)
+        intSound += 1
+        With snd
+            .Name = "SOUND" & intSound
+            .play(1, False, 300)
+        End With
         lblInstructiuni.Top -= 5
     End Sub
 
@@ -42,6 +66,14 @@ Public Class Form1
     End Sub
 
     Private Sub lblReset_MouseEnter(sender As Object, e As EventArgs) Handles lblReset.MouseEnter
+
+        'My.Computer.Audio.Play(My.Resources.Finger_snap, _
+        ' AudioPlayMode.Background)
+        intSound += 1
+        With snd
+            .Name = "SOUND" & intSound
+            .play(1, False, 300)
+        End With
         lblReset.Top -= 5
     End Sub
 
@@ -50,6 +82,14 @@ Public Class Form1
     End Sub
 
     Private Sub lblExit_MouseEnter(sender As Object, e As EventArgs) Handles lblExit.MouseEnter
+
+        'My.Computer.Audio.Play(My.Resources.Finger_snap, _
+        ' AudioPlayMode.Background)
+        intSound += 1
+        With snd
+            .Name = "SOUND" & intSound
+            .play(1, False, 300)
+        End With
         lblExit.Top -= 5
     End Sub
 
@@ -58,6 +98,14 @@ Public Class Form1
     End Sub
 
     Private Sub lblSelectare_MouseEnter(sender As Object, e As EventArgs) Handles lblSelectare.MouseEnter
+
+        intSound += 1
+        With snd
+            .Name = "SOUND" & intSound
+            .play(1, False, 300)
+        End With
+        'My.Computer.Audio.Play(My.Resources.Finger_snap, _
+        ' AudioPlayMode.Background)
         lblSelectare.Top -= 5
     End Sub
 
@@ -67,6 +115,7 @@ Public Class Form1
 
     Private Sub lblInstructiuni_Click(sender As Object, e As EventArgs) Handles lblInstructiuni.Click
         'Afiseaza instructiunile si schimba textul etichetei
+
         If lblInstructiuni.Text = "Instructions" Then
             lblInstructiuni2.BringToFront()
             Dim size As Single = lblInstructiuni.Font.Size
@@ -79,8 +128,18 @@ Public Class Form1
         End If
     End Sub
 
+    'Sub PlayBackgroundSoundResource()
+    '     My.Computer.Audio.Play(My.Resources.music, _
+    '         AudioPlayMode.BackgroundLoop)
+    '  End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' PlayBackgroundSoundResource()
+        intSound += 1
+        With snd
+            .Name = "SOUND" & intSound
+            .play(0, True, 20)
+        End With
         lblInstructiuni2.Visible = True
         lblInstructiuni2.Text = vbCrLf & vbCrLf & vbCrLf & vbCrLf & "Acest joc iti testeaza coordonarea ochi-mana si capacitatea ta de concentrare. Ghideaza cursorul prin labirint pentru a termina fiecare nivel. Nu atinge peretii! Daca o vei face, jocul se va restarta si va trebui sa o iei de la capat! "
         Me.Top = (My.Computer.Screen.WorkingArea.Height \ 2) - (Me.Height \ 2)
@@ -88,6 +147,8 @@ Public Class Form1
 
         firstTime = Data.startFirst.Text
         If firstTime = True Then
+
+
 
 
             If My.Computer.FileSystem.FileExists("Data.txt") Then
@@ -210,4 +271,6 @@ Public Class Form1
             MsgBox("Resetarea s-a realizat cu succes!")
         End If
     End Sub
+
+
 End Class

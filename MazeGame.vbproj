@@ -113,6 +113,12 @@
     <Compile Include="level_4.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="level_5.Designer.vb">
+      <DependentUpon>level_5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="level_5.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -128,6 +134,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="sound.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Data.resx">
@@ -150,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="level_4.resx">
       <DependentUpon>level_4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="level_5.resx">
+      <DependentUpon>level_5.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -184,6 +194,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\level4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\levell4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Finger-snap.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gameover.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
