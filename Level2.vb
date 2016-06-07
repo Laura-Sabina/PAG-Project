@@ -10,7 +10,7 @@
         Me.Top = (My.Computer.Screen.WorkingArea.Height \ 2) - (Me.Height \ 2)
         Me.Left = (My.Computer.Screen.WorkingArea.Width \ 2) - (Me.Width \ 2)
         lblNext.Visible = False
-        'firstLoad = Data.first2.Text
+        firstLoad = Data.first2.Text
     End Sub
 
     Private Sub lblMenu_Click(sender As Object, e As EventArgs) Handles lblMenu.Click
@@ -75,6 +75,7 @@
             .play(3, False, 300)
         End With
         Timer1.Enabled = False
+        total = 60 * min + sec
         Level_3.Show()
 
         'Daca este primul joc va salva timpul in formularul Data
@@ -89,7 +90,7 @@
                 Data.time2.Text = total
             End If
         End If
-        Data.complete1.Text = "True"
+        Data.complete2.Text = "True"
         Me.Close()
 
     End Sub
@@ -111,6 +112,11 @@
             lblNext.Visible = False
             Timer1.Enabled = False
             Timer2.Enabled = False
+            intSound += 1
+            With snd
+                .Name = "SOUND" & intSound
+                .play(2, False)
+            End With
             min = 0
             sec = 0
             total = 0

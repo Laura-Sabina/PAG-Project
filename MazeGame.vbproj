@@ -119,6 +119,18 @@
     <Compile Include="level_5.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Level_6.Designer.vb">
+      <DependentUpon>Level_6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Level_6.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="level_7.Designer.vb">
+      <DependentUpon>level_7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="level_7.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -160,6 +172,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="level_5.resx">
       <DependentUpon>level_5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Level_6.resx">
+      <DependentUpon>Level_6.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="level_7.resx">
+      <DependentUpon>level_7.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -212,6 +230,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\win.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level7.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -5,6 +5,8 @@ Public Class Form1
     Dim intSound As Integer = 0
     Dim snd As New sound
     Dim firstTime As Boolean
+
+
     Private Sub Hsound()
         For x = 0 To intSound
             snd.kill("SOUND" & x)
@@ -15,21 +17,45 @@ Public Class Form1
 
     Private Sub lblExit_Click(sender As Object, e As EventArgs) Handles lblExit.Click
 
-        ' My.Computer.FileSystem.WriteAllText("Data.txt", Data.complete1.Text & ControlChars.NewLine & _
-        '      Data.complete2.Text & ControlChars.NewLine & _
-        '      Data.complete3.Text & ControlChars.NewLine & _
-        '     Data.complete4.Text & ControlChars.NewLine & _
-        '     Data.complete5.Text & ControlChars.NewLine & _
-        '  Data.complete6.Text & ControlChars.NewLine & _
-        '   Data.complete7.Text & ControlChars.NewLine & _
-        '  Data.complete8.Text & ControlChars.NewLine & _
-        '   Data.complete9.Text & ControlChars.NewLine & _
-        '   Data.complete10.Text & ControlChars.NewLine, False)
+
+        My.Computer.FileSystem.WriteAllText("MazeGameTiming.txt", Data.complete1.Text & ControlChars.NewLine & _
+                                                    Data.first1.Text & ControlChars.NewLine & _
+                                                    Data.time1.Text & ControlChars.NewLine & _
+                                                    Data.complete2.Text & ControlChars.NewLine & _
+                                                    Data.first2.Text & ControlChars.NewLine & _
+                                                    Data.time2.Text & ControlChars.NewLine & _
+                                                    Data.complete3.Text & ControlChars.NewLine & _
+                                                    Data.first3.Text & ControlChars.NewLine & _
+                                                    Data.time3.Text & ControlChars.NewLine & _
+                                                    Data.complete4.Text & ControlChars.NewLine & _
+                                                    Data.first4.Text & ControlChars.NewLine & _
+                                                    Data.time4.Text & ControlChars.NewLine & _
+                                                    Data.complete5.Text & ControlChars.NewLine & _
+                                                    Data.first5.Text & ControlChars.NewLine & _
+                                                    Data.time5.Text & ControlChars.NewLine & _
+                                                    Data.complete6.Text & ControlChars.NewLine & _
+                                                    Data.first6.Text & ControlChars.NewLine & _
+                                                    Data.time6.Text & ControlChars.NewLine & _
+                                                    Data.complete7.Text & ControlChars.NewLine & _
+                                                    Data.first7.Text & ControlChars.NewLine & _
+                                                    Data.time7.Text & ControlChars.NewLine & _
+                                                    Data.complete8.Text & ControlChars.NewLine & _
+                                                    Data.first8.Text & ControlChars.NewLine & _
+                                                    Data.time8.Text & ControlChars.NewLine & _
+                                                    Data.complete9.Text & ControlChars.NewLine & _
+                                                    Data.first9.Text & ControlChars.NewLine & _
+                                                    Data.time9.Text & ControlChars.NewLine & _
+                                                    Data.complete10.Text & ControlChars.NewLine & _
+                                                    Data.first10.Text & ControlChars.NewLine & _
+                                                    Data.time10.Text & ControlChars.NewLine, False)
+
         Me.Close()
+
     End Sub
     Private Sub lblStart_Click(sender As Object, e As EventArgs) Handles lblStart.Click
         Level_1.Show()
         Level_1.lblNext.Visible = False
+        Me.Close()
     End Sub
 
     Private Sub lblStart_MouseEnter(sender As Object, e As EventArgs) Handles lblStart.MouseEnter
@@ -134,25 +160,19 @@ Public Class Form1
     '  End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' PlayBackgroundSoundResource()
-        intSound += 1
-        With snd
-            .Name = "SOUND" & intSound
-            .play(0, True, 20)
-        End With
+
+        My.Computer.Audio.Play(My.Resources.music, AudioPlayMode.BackgroundLoop)
+
         lblInstructiuni2.Visible = True
         lblInstructiuni2.Text = vbCrLf & vbCrLf & vbCrLf & vbCrLf & "Acest joc iti testeaza coordonarea ochi-mana si capacitatea ta de concentrare. Ghideaza cursorul prin labirint pentru a termina fiecare nivel. Nu atinge peretii! Daca o vei face, jocul se va restarta si va trebui sa o iei de la capat! "
         Me.Top = (My.Computer.Screen.WorkingArea.Height \ 2) - (Me.Height \ 2)
         Me.Left = (My.Computer.Screen.WorkingArea.Width \ 2) - (Me.Width \ 2)
 
         firstTime = Data.startFirst.Text
+
         If firstTime = True Then
-
-
-
-
-            If My.Computer.FileSystem.FileExists("Data.txt") Then
-                Dim reader As New System.IO.StreamReader("Data.txt")
+            If My.Computer.FileSystem.FileExists("MazeGameTiming.txt") Then
+                Dim reader As New System.IO.StreamReader("MazeGameTiming.txt")
                 Data.complete1.Text = reader.ReadLine
                 Data.first1.Text = reader.ReadLine
                 Data.time1.Text = reader.ReadLine
@@ -192,8 +212,9 @@ Public Class Form1
                 Data.complete10.Text = reader.ReadLine
                 Data.first10.Text = reader.ReadLine
                 Data.time10.Text = reader.ReadLine
+                reader.Close()
             Else
-                My.Computer.FileSystem.WriteAllText("Data.txt", Data.complete1.Text & ControlChars.NewLine & _
+                My.Computer.FileSystem.WriteAllText("MazeGameTiming.txt", Data.complete1.Text & ControlChars.NewLine & _
                                                     Data.first1.Text & ControlChars.NewLine & _
                                                     Data.time1.Text & ControlChars.NewLine & _
                                                     Data.complete2.Text & ControlChars.NewLine & _
@@ -233,6 +254,8 @@ Public Class Form1
 
     Private Sub lblSelectare_Click(sender As Object, e As EventArgs) Handles lblSelectare.Click
         LevelSelect.Show()
+        Me.Close()
+
 
     End Sub
 

@@ -420,17 +420,17 @@ Partial Class Level_3
         '
         'lblBlock2
         '
-        Me.lblBlock2.Location = New System.Drawing.Point(440, 655)
+        Me.lblBlock2.Location = New System.Drawing.Point(441, 648)
         Me.lblBlock2.Name = "lblBlock2"
-        Me.lblBlock2.Size = New System.Drawing.Size(50, 86)
+        Me.lblBlock2.Size = New System.Drawing.Size(50, 99)
         Me.lblBlock2.TabIndex = 128
         Me.lblBlock2.Text = " "
         '
         'lblBlock3
         '
-        Me.lblBlock3.Location = New System.Drawing.Point(316, 594)
+        Me.lblBlock3.Location = New System.Drawing.Point(318, 570)
         Me.lblBlock3.Name = "lblBlock3"
-        Me.lblBlock3.Size = New System.Drawing.Size(50, 72)
+        Me.lblBlock3.Size = New System.Drawing.Size(50, 82)
         Me.lblBlock3.TabIndex = 129
         Me.lblBlock3.Text = " "
         '

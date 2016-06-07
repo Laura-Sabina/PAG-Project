@@ -550,18 +550,22 @@ Partial Class LevelSelect
         'Level6
         '
         Me.Level6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Level6.Image = Global.MazeGame.My.Resources.Resources.level6
         Me.Level6.Location = New System.Drawing.Point(20, 284)
         Me.Level6.Name = "Level6"
         Me.Level6.Size = New System.Drawing.Size(124, 113)
+        Me.Level6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Level6.TabIndex = 9
         Me.Level6.TabStop = False
         '
         'Level7
         '
         Me.Level7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Level7.Image = Global.MazeGame.My.Resources.Resources.level7
         Me.Level7.Location = New System.Drawing.Point(176, 284)
         Me.Level7.Name = "Level7"
         Me.Level7.Size = New System.Drawing.Size(124, 113)
+        Me.Level7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Level7.TabIndex = 8
         Me.Level7.TabStop = False
         '

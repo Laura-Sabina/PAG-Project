@@ -17,7 +17,7 @@
         Me.Top = (My.Computer.Screen.WorkingArea.Height \ 2) - (Me.Height \ 2)
         Me.Left = (My.Computer.Screen.WorkingArea.Width \ 2) - (Me.Width \ 2)
         lblNext.Visible = False
-        'firstLoad = Data.first4.Text
+        firstLoad = Data.first4.Text
     End Sub
     Private Sub lblMenu_Click(sender As Object, e As EventArgs) Handles lblMenu.Click
         Form1.Show()
@@ -47,7 +47,7 @@
             total = 0
             lblTime1.Text = "00:00"
             MsgBox("Ai atins peretii!")
-               lbl2.Location = New Point(123, 125)
+            lbl2.Location = New Point(120, 125)
             Timer1.Enabled = False
             Timer2.Enabled = False
 
@@ -83,21 +83,22 @@
             .play(3, False, 300)
         End With
         Timer1.Enabled = False
+        total = 60 * min + sec
         Level_5.Show()
 
         'Daca este primul joc va salva timpul in formularul Data
 
         If firstLoad = True Then
-            Data.time2.Text = total
-            Data.first2.Text = "False"
+            Data.time4.Text = total
+            Data.first4.Text = "False"
         Else
             'daca nu este prima data va compara datele si va salva cel mai rapid timp
             Dim t As Integer
-            If total < Int32.TryParse(Data.time2.Text, t) Then
-                Data.time2.Text = total
+            If total < Int32.TryParse(Data.time4.Text, t) Then
+                Data.time4.Text = total
             End If
         End If
-        Data.complete1.Text = "True"
+        Data.complete4.Text = "True"
         Me.Close()
 
     End Sub

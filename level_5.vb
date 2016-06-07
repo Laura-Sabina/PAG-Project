@@ -56,21 +56,22 @@
         End With
 
         Timer1.Enabled = False
+        total = 60 * min + sec
         ' Level_6.Show()
 
         'Daca este primul joc va salva timpul in formularul Data
 
         If firstLoad = True Then
-            Data.time2.Text = total
-            Data.first2.Text = "False"
+            Data.time5.Text = total
+            Data.first5.Text = "False"
         Else
             'daca nu este prima data va compara datele si va salva cel mai rapid timp
             Dim t As Integer
-            If total < Int32.TryParse(Data.time2.Text, t) Then
-                Data.time2.Text = total
+            If total < Int32.TryParse(Data.time5.Text, t) Then
+                Data.time5.Text = total
             End If
         End If
-        Data.complete1.Text = "True"
+        Data.complete5.Text = "True"
         Me.Close()
 
     End Sub

@@ -17,34 +17,35 @@
         'deblocheaza nivelul
         If Data.complete1.Text = "True" Then
             lblLevel1.Visible = False
-        End If
-        If Data.complete2.Text = "True" Then
             lblLevel2.Visible = False
         End If
-        If Data.complete3.Text = "True" Then
+        If Data.complete2.Text = "True" Then
             lblLevel3.Visible = False
         End If
-        If Data.complete4.Text = "True" Then
+        If Data.complete3.Text = "True" Then
             lblLevel4.Visible = False
         End If
-        If Data.complete5.Text = "True" Then
+        If Data.complete4.Text = "True" Then
             lblLevel5.Visible = False
         End If
-        If Data.complete6.Text = "True" Then
+        If Data.complete5.Text = "True" Then
             lblLevel6.Visible = False
         End If
-        If Data.complete7.Text = "True" Then
+        If Data.complete6.Text = "True" Then
             lblLevel7.Visible = False
         End If
-        If Data.complete8.Text = "True" Then
+        If Data.complete7.Text = "True" Then
             lblLevel8.Visible = False
         End If
-        If Data.complete9.Text = "True" Then
+        If Data.complete8.Text = "True" Then
             lblLevel9.Visible = False
         End If
-        If Data.complete10.Text = "True" Then
+        If Data.complete9.Text = "True" Then
             lblLevel10.Visible = False
         End If
+        'If Data.complete10.Text = "True" Then
+        'lblLevel10.Visible = False
+        'End If
         'Functia convertToTime va prelua timpul (numarul total de secunde)
         'din forumlarul Data si il va converti in formatul timp
         'timp = Convert.ToInt32(Data.time1.Text)
@@ -91,6 +92,7 @@
     End Sub
 
     Private Sub lblBackToMenu_Click(sender As Object, e As EventArgs) Handles lblBackToMenu.Click
+        Form1.Show()
         Me.Close()
 
     End Sub
@@ -144,15 +146,18 @@
     End Sub
 
     Private Sub Level5_Click(sender As Object, e As EventArgs) Handles Level5.Click
-
+        level_5.Show()
+        Me.Close()
     End Sub
 
     Private Sub Level6_Click(sender As Object, e As EventArgs) Handles Level6.Click
-
+        Level_6.Show()
+        Me.Close()
     End Sub
 
     Private Sub Level7_Click(sender As Object, e As EventArgs) Handles Level7.Click
-
+        level_7.Show()
+        Me.Close()
     End Sub
 
     Private Sub Level8_Click(sender As Object, e As EventArgs) Handles Level8.Click

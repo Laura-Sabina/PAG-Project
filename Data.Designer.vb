@@ -95,7 +95,7 @@ Partial Class Data
         'time1
         '
         Me.time1.AutoSize = True
-        Me.time1.Location = New System.Drawing.Point(270, 30)
+        Me.time1.Location = New System.Drawing.Point(266, 30)
         Me.time1.Name = "time1"
         Me.time1.Size = New System.Drawing.Size(18, 20)
         Me.time1.TabIndex = 3

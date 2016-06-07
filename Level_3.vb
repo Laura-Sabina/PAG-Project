@@ -12,7 +12,7 @@
         Me.Top = (My.Computer.Screen.WorkingArea.Height \ 2) - (Me.Height \ 2)
         Me.Left = (My.Computer.Screen.WorkingArea.Width \ 2) - (Me.Width \ 2)
         lblNext.Visible = False
-        'firstLoad = Data.first3.Text
+        firstLoad = Data.first3.Text
     End Sub
 
     Private Sub lblMenu_MouseEnter(sender As Object, e As EventArgs) Handles lblMenu.MouseEnter
@@ -66,6 +66,7 @@
         End If
 
         lblTime1.Text = min & ":" & sec
+        total = lblTime1.Text
     End Sub
     Private Sub lblNext_Click(sender As Object, e As EventArgs) Handles lblNext.Click
         intSound += 1
@@ -74,6 +75,7 @@
             .play(3, False, 300)
         End With
         Timer1.Enabled = False
+        total = 60 * min + sec
         Level_4.Show()
 
         'Daca este primul joc va salva timpul in formularul Data
@@ -110,7 +112,8 @@
                     blockUp = True
                 End If
             End If
-
+        End If
+        If gameStart = True Then
             If blockUp = True Then
                 lblBlock2.Top += 6
                 blockCounter += 6
@@ -124,7 +127,8 @@
                     blockUp = True
                 End If
             End If
-
+        End If
+        If gameStart = True Then
             If blockUp = True Then
                 lblBlock3.Top += 9
                 blockCounter += 9
@@ -138,7 +142,8 @@
                     blockUp = True
                 End If
             End If
-
+        End If
+        If gameStart = True Then
             If blockUp = True Then
                 lblBlock4.Top += 15
                 blockCounter += 15
@@ -152,7 +157,8 @@
                     blockUp = True
                 End If
             End If
-
+        End If
+        If gameStart = True Then
             If blockUp = True Then
                 lblBlock5.Top += 15
                 blockCounter += 15
@@ -224,5 +230,9 @@
 
     Private Sub lblStart_MouseLeave(sender As Object, e As EventArgs) Handles lblStart.MouseLeave
         lblStart.Top += 5
+    End Sub
+
+    Private Sub lblBlock3_Click(sender As Object, e As EventArgs) Handles lblBlock3.Click
+
     End Sub
 End Class

@@ -12,13 +12,15 @@
 
     Public Sub play(ByVal id As Integer, ByVal repeat As Boolean, Optional vol As Integer = 1000)
         If repeat = True Then
+
             mciSendString("Open " & Getfile(id) & " alias " & oName, CStr(0), 0, 0)
-            mciSendString("play " & oName, CStr(0), 0, 0)
+            mciSendString("play " & oName & " repeat ", CStr(0), 0, 0)
+
         Else
             mciSendString("Open " & Getfile(id) & " alias " & oName, CStr(0), 0, 0)
             mciSendString("play " & oName, CStr(0), 0, 0)
         End If
-        mciSendString("setaudio " & oName & " volume to ", CStr(0), 0, 0)
+        mciSendString("setaudio " & oName & " volume to " & vol, CStr(0), 0, 0)
 
     End Sub
     Public Sub kill(ByVal song As String)
@@ -43,6 +45,13 @@
 
         Return path
     End Function
+    Public Sub StartFrom(ByVal Milliseconds As Integer)
+        '------------------------------------------------------------------------------------------------------------------
+        ' Purpose: Play audio file from (n) mS position 
+        '------------------------------------------------------------------------------------------------------------------
 
+        mciSendString("myaudio " & Milliseconds.ToString, "", 0, 0)
+
+    End Sub
 
 End Class

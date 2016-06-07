@@ -325,9 +325,9 @@ Partial Class Level_2
         '
         'lblBlock
         '
-        Me.lblBlock.Location = New System.Drawing.Point(12, 327)
+        Me.lblBlock.Location = New System.Drawing.Point(12, 357)
         Me.lblBlock.Name = "lblBlock"
-        Me.lblBlock.Size = New System.Drawing.Size(195, 211)
+        Me.lblBlock.Size = New System.Drawing.Size(195, 139)
         Me.lblBlock.TabIndex = 122
         Me.lblBlock.Text = " "
         '
