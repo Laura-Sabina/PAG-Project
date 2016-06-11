@@ -28,3 +28,6 @@ C:\Users\Sabina\Desktop\proiect pag\MazeGame\obj\Debug\MazeGame.level_5.resource
 C:\Users\Sabina\Desktop\proiect pag\MazeGame\obj\Debug\MazeGame.vbprojResolveAssemblyReference.cache
 C:\Users\Sabina\Desktop\proiect pag\MazeGame\obj\Debug\MazeGame.Level_6.resources
 C:\Users\Sabina\Desktop\proiect pag\MazeGame\obj\Debug\MazeGame.level_7.resources
+C:\Users\Sabina\Desktop\proiect pag\MazeGame\obj\Debug\MazeGame.m.resources
+C:\Users\Sabina\Desktop\proiect pag\MazeGame\obj\Debug\MazeGame.Level_8.resources
+C:\Users\Sabina\Desktop\proiect pag\MazeGame\obj\Debug\MazeGame.Level_9.resources

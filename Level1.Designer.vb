@@ -23,6 +23,7 @@ Partial Class Level_1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Level_1))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblMenu = New System.Windows.Forms.Label()
@@ -335,6 +336,7 @@ Partial Class Level_1
         Me.Controls.Add(Me.lblMenu)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Level_1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Level1"

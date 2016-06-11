@@ -23,13 +23,13 @@ Partial Class level_7
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(level_7))
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
         Me.lblMenu = New System.Windows.Forms.Label()
         Me.lbl1 = New System.Windows.Forms.Label()
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
@@ -104,15 +104,6 @@ Partial Class level_7
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(92, 16)
         Me.Label28.TabIndex = 243
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(1, -15)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(66, 20)
-        Me.Label25.TabIndex = 240
-        Me.Label25.Text = "Label25"
         '
         'lblMenu
         '
@@ -388,7 +379,6 @@ Partial Class level_7
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label28)
-        Me.Controls.Add(Me.Label25)
         Me.Controls.Add(Me.lblMenu)
         Me.Controls.Add(Me.lbl1)
         Me.Controls.Add(Me.Label23)
@@ -402,10 +392,10 @@ Partial Class level_7
         Me.Controls.Add(Me.lblTime1)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "level_7"
         Me.Text = "level_7"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label32 As System.Windows.Forms.Label
@@ -414,7 +404,6 @@ Partial Class level_7
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Label28 As System.Windows.Forms.Label
-    Friend WithEvents Label25 As System.Windows.Forms.Label
     Friend WithEvents lblMenu As System.Windows.Forms.Label
     Friend WithEvents lbl1 As System.Windows.Forms.Label
     Friend WithEvents Timer3 As System.Windows.Forms.Timer

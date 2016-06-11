@@ -44,6 +44,8 @@
             total = 0
             lblTime1.Text = "00:00"
             MsgBox("Ai atins peretii!")
+
+
             ' tPad.Location = New Point(120, 125)
             Timer1.Enabled = False
             Timer2.Enabled = False
@@ -58,6 +60,12 @@
         Timer1.Enabled = True
         Timer2.Enabled = True
         Timer3.Enabled = True
+
+        bridge3.Visible = True
+        bridge1.Visible = True
+        bridge2.Visible = False
+        bridge4.Visible = False
+
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -181,7 +189,7 @@
         lose()
     End Sub
 
-    Private Sub lblBlock1_Click(sender As Object, e As EventArgs) Handles lblBlock1.Click
+ 
 
-    End Sub
+   
 End Class

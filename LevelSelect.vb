@@ -40,9 +40,9 @@
         If Data.complete8.Text = "True" Then
             lblLevel9.Visible = False
         End If
-        If Data.complete9.Text = "True" Then
-            lblLevel10.Visible = False
-        End If
+        'If Data.complete9.Text = "True" Then
+        '  lblLevel10.Visible = False
+        'End If
         'If Data.complete10.Text = "True" Then
         'lblLevel10.Visible = False
         'End If
@@ -85,9 +85,9 @@
         convertToTime()
         lbltime9.Text = min & middle & sec
 
-        Int32.TryParse(Data.time10.Text, timp)
-        convertToTime()
-        lbltime10.Text = min & middle & sec
+        'Int32.TryParse(Data.time10.Text, timp)
+        'convertToTime()
+        'lbltime10.Text = min & middle & sec
 
     End Sub
 
@@ -161,15 +161,17 @@
     End Sub
 
     Private Sub Level8_Click(sender As Object, e As EventArgs) Handles Level8.Click
-
+        Level_8.Show()
+        Me.Close()
     End Sub
 
     Private Sub Level9_Click(sender As Object, e As EventArgs) Handles Level9.Click
-
+        Level_9.Show()
+        Me.Close()
     End Sub
 
 
-    Private Sub lblLevel1_MouseEnter(sender As Object, e As EventArgs) Handles lblLevel9.MouseEnter, lblLevel8.MouseEnter, lblLevel7.MouseEnter, lblLevel6.MouseEnter, lblLevel5.MouseEnter, lblLevel4.MouseEnter, lblLevel3.MouseEnter, lblLevel2.MouseEnter, lblLevel10.MouseEnter, lblLevel1.MouseEnter
+    Private Sub lblLevel1_MouseEnter(sender As Object, e As EventArgs)
         intSound += 1
         With snd
             .Name = "SOUND" & intSound

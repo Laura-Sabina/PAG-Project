@@ -23,6 +23,7 @@ Partial Class Level_3
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Level_3))
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -68,7 +69,7 @@ Partial Class Level_3
         Me.lblBlock4 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.SuspendLayout
+        Me.SuspendLayout()
         '
         'Label23
         '
@@ -82,7 +83,7 @@ Partial Class Level_3
         '
         'Label2
         '
-        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label2.Location = New System.Drawing.Point(818, -6)
         Me.Label2.Name = "Label2"
@@ -92,7 +93,7 @@ Partial Class Level_3
         '
         'Label4
         '
-        Me.Label4.Font = New System.Drawing.Font("Papyrus", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label4.Font = New System.Drawing.Font("Papyrus", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.MistyRose
         Me.Label4.Location = New System.Drawing.Point(834, 72)
         Me.Label4.Name = "Label4"
@@ -103,7 +104,7 @@ Partial Class Level_3
         '
         'lblTime1
         '
-        Me.lblTime1.Font = New System.Drawing.Font("Papyrus", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lblTime1.Font = New System.Drawing.Font("Papyrus", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTime1.ForeColor = System.Drawing.Color.MistyRose
         Me.lblTime1.Location = New System.Drawing.Point(915, 72)
         Me.lblTime1.Name = "lblTime1"
@@ -115,7 +116,7 @@ Partial Class Level_3
         'lblMenu
         '
         Me.lblMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblMenu.Font = New System.Drawing.Font("Papyrus", 11!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lblMenu.Font = New System.Drawing.Font("Papyrus", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMenu.ForeColor = System.Drawing.Color.MistyRose
         Me.lblMenu.Location = New System.Drawing.Point(853, 628)
         Me.lblMenu.Name = "lblMenu"
@@ -126,7 +127,7 @@ Partial Class Level_3
         '
         'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("Papyrus", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label1.Font = New System.Drawing.Font("Papyrus", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.MistyRose
         Me.Label1.Location = New System.Drawing.Point(834, 9)
         Me.Label1.Name = "Label1"
@@ -139,7 +140,7 @@ Partial Class Level_3
         '
         Me.lblNext.BackColor = System.Drawing.Color.Maroon
         Me.lblNext.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblNext.Font = New System.Drawing.Font("Papyrus", 11!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lblNext.Font = New System.Drawing.Font("Papyrus", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNext.ForeColor = System.Drawing.Color.LightCoral
         Me.lblNext.Location = New System.Drawing.Point(301, 288)
         Me.lblNext.Name = "lblNext"
@@ -161,7 +162,7 @@ Partial Class Level_3
         '
         Me.lblStart.BackColor = System.Drawing.Color.Maroon
         Me.lblStart.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblStart.Font = New System.Drawing.Font("Papyrus", 11!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lblStart.Font = New System.Drawing.Font("Papyrus", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblStart.ForeColor = System.Drawing.Color.LightCoral
         Me.lblStart.Location = New System.Drawing.Point(676, 642)
         Me.lblStart.Name = "lblStart"
@@ -451,7 +452,7 @@ Partial Class Level_3
         '
         'Level_3
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9!, 20!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(1019, 737)
@@ -499,6 +500,7 @@ Partial Class Level_3
         Me.Controls.Add(Me.Label23)
         Me.Controls.Add(Me.Label2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Level_3"
         Me.Text = "Level_3"
         Me.ResumeLayout(false)

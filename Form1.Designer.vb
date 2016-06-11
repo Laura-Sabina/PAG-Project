@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.lblInstructiuni2 = New System.Windows.Forms.Label()
         Me.lblReset = New System.Windows.Forms.Label()
         Me.lblExit = New System.Windows.Forms.Label()
@@ -133,6 +134,7 @@ Partial Class Form1
         Me.Controls.Add(Me.lblInstructiuni)
         Me.Controls.Add(Me.lblStart)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Form1"

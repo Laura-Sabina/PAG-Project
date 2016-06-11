@@ -151,6 +151,36 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property level8() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("level8", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property level9() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("level9", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property level91() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("level91", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property levell4() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("levell4", resourceCulture)

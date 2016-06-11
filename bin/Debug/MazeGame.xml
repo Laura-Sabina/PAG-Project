@@ -51,6 +51,18 @@ MazeGame
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:MazeGame.My.Resources.Resources.level8">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:MazeGame.My.Resources.Resources.level9">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:MazeGame.My.Resources.Resources.level91">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:MazeGame.My.Resources.Resources.levell4">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

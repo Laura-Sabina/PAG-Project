@@ -44,10 +44,7 @@ Public Class Form1
                                                     Data.time8.Text & ControlChars.NewLine & _
                                                     Data.complete9.Text & ControlChars.NewLine & _
                                                     Data.first9.Text & ControlChars.NewLine & _
-                                                    Data.time9.Text & ControlChars.NewLine & _
-                                                    Data.complete10.Text & ControlChars.NewLine & _
-                                                    Data.first10.Text & ControlChars.NewLine & _
-                                                    Data.time10.Text & ControlChars.NewLine, False)
+                                                    Data.time9.Text & ControlChars.NewLine, False)
 
         Me.Close()
 

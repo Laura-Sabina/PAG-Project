@@ -32,26 +32,31 @@
     End Sub
 
     Private Sub level_7_MouseEnter(sender As Object, e As EventArgs) Handles Me.MouseEnter
-        If gameStart = True Then
+
+            If gameStart = True Then
             gameStart = False
-            lblStart.Visible = True
-            lblNext.Visible = False
+
             intSound += 1
             With snd
                 .Name = "SOUND" & intSound
                 .play(2, False)
             End With
-            min = 0
-            sec = 0
-            total = 0
-            lblTime1.Text = "00:00"
-            MsgBox("Ai atins peretii!")
-            ' tPad.Location = New Point(120, 125)
-            Timer1.Enabled = False
-            Timer2.Enabled = False
-            Timer3.Enabled = False
+                lblStart.Visible = True
+                lblNext.Visible = False
+               
+                min = 0
+                sec = 0
+                total = 0
+                lblTime1.Text = "00:00"
+                MsgBox("Ai atins peretii!")
+                ' tPad.Location = New Point(120, 125)
+                Timer1.Enabled = False
+                Timer2.Enabled = False
+                Timer3.Enabled = False
+            End If
 
-        End If
+
+
     End Sub
     Private Sub lblStart_Click(sender As Object, e As EventArgs) Handles lblStart.Click
         gameStart = True
@@ -81,7 +86,7 @@
         End With
         Timer1.Enabled = False
         total = 60 * min + sec
-        ' Level_8.Show()
+        Level_8.Show()
 
         'Daca este primul joc va salva timpul in formularul Data
 
@@ -174,7 +179,7 @@
             Else
                 lbl3.Top -= 5
                 l3count -= 5
-                If l3count <= -70 Then
+                If l3count <= -100 Then
                     l3up = True
                 End If
             End If

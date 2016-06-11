@@ -1,9 +1,6 @@
 ﻿True
 False
-35
-False
-True
-0
+27
 False
 True
 0
